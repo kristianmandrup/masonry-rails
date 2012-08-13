@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>Masonry Drag and Drop</title>
+  <style type="text/css">
+      .box-item {
+        width: 100px;
+        height: 100px;
+        float: left;
+        background-color: grey;
+        margin: 10px;
+      }
+
+      .handle {
+        background-color: black;
+        height: 20px;
+        cursor: move;
+      }
+
+      .drag-ghost { 
+        opacity: 0.5; 
+        z-index: 0;
+      }
+
+      .color1 { background-color: blue; z-index: 9999;}
+      .color2 { background-color: green;}
+      .bigger { height: 150px; }
+      .smaller { height: 75px; width: 200px; }      
+  </style>
+  <script src="js/jquery-1.7.1.min.js"></script>
+  <script src="js/jquery.event.drag-2.2.js"></script>
+  <script src="jquery.masonry.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="box-item"><div class="handle"></div>A</div>
+    <div class="box-item"><div class="handle"></div>B</div>
+    <div class="box-item bigger"><div class="handle"></div>C</div>
+    <div class="box-item"><div class="handle"></div>D</div>
+    <div class="box-item smaller"><div class="handle"></div>E</div>
+    <div class="box-item"><div class="handle"></div>F</div>
+    <div class="box-item"><div class="handle"></div>G</div>
+    <div class="box-item smaller"><div class="handle">H</div></div>
+    <div class="box-item"><div class="handle"></div>I</div>
+    <div class="box-item smaller"><div class="handle"></div>J</div>
+    <div class="box-item"><div class="handle"></div>K</div>
+    <div class="box-item bigger"><div class="handle"></div>L</div>
+  </div>​
+  <script type="text/javascript">
+    $("#container").masonry({
+      isAnimated  : true,
+      isDraggable : true,
+      dragHandleSelector: '.handle',
+      dragClass: 'color1'
+    });
+  </script>
+</body>
+</html>
