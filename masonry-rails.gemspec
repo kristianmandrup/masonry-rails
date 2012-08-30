@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "masonry-rails"
-  s.version = "0.1.0"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-21"
+  s.date = "2012-08-30"
   s.description = "Masonry will rock your world!"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -63,13 +63,20 @@ Gem::Specification.new do |s|
     "spec/_posts/tests/2011-09-27-centered-few.html",
     "spec/index.html",
     "spec/spec_helper.rb",
+    "vendor/assets/images/masonry/loader.gif",
+    "vendor/assets/javascripts/infiniteScroll/jquery.infinitescroll.min.js",
     "vendor/assets/javascripts/masonry/box-maker.js",
     "vendor/assets/javascripts/masonry/jquery.event.drag-2.2.js",
-    "vendor/assets/javascripts/masonry/jquery.infinitescroll.min.js",
     "vendor/assets/javascripts/masonry/jquery.masonry.js",
     "vendor/assets/javascripts/masonry/jquery.masonry.min.js",
     "vendor/assets/javascripts/masonry/modernizr-transitions.js",
-    "vendor/assets/stylesheets/masonry/style.css"
+    "vendor/assets/stylesheets/masonry/basic.css",
+    "vendor/assets/stylesheets/masonry/centered.css",
+    "vendor/assets/stylesheets/masonry/fluid.css",
+    "vendor/assets/stylesheets/masonry/gutters.css",
+    "vendor/assets/stylesheets/masonry/infinitescroll.css",
+    "vendor/assets/stylesheets/masonry/right-to-left.css",
+    "vendor/assets/stylesheets/masonry/transitions.css"
   ]
   s.homepage = "http://github.com/kristianmandrup/masonry-rails"
   s.licenses = ["MIT"]
