@@ -383,7 +383,17 @@ You can combine masonry infinite scroll with Kaminari using suggestions here:
 
 [Create-Infinite-Scrolling-with-jQuery](https://github.com/amatsuda/kaminari/wiki/How-To:-Create-Infinite-Scrolling-with-jQuery)
 
-[railscast-endless-page](http://railscasts.com/episodes/114-endless-page-revised)
+[Sausage](https://github.com/christophercliff/sausage), used in this example is also included with this gem ;)
+
+Stylesheets: `sausage/sausage.css`and `sausage/sausage.reset.css`
+
+Javascript: `masonry/jquery.sausagemin.min.js`
+
+For more see [sausage info](http://christophercliff.github.com/sausage)
+
+Note: You need to configure Jquery UI to use sausage.
+
+See: [railscast-endless-page](http://railscasts.com/episodes/114-endless-page-revised) for how to use endless pages with Rails using *will_paginate* gem.
 
 ### jQuery pageless
 
