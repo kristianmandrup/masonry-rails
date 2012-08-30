@@ -381,15 +381,83 @@ Or whichever animated loader icon you want to use ;)
 
 You can combine masonry infinite scroll with Kaminari using suggestions here:
 
-[Create-Infinite-Scrolling-with-jQuery](https://github.com/amatsuda/kaminari/wiki/How-To:-Create-Infinite-Scrolling-with-jQuery)
+In the above example, to enable paging simply have the `pages/2.html` link respond with the next page and infinite scroll will automatically ajax-retrieve and render the elements indicated by `itemSelector` into the container.
 
-[Sausage](https://github.com/christophercliff/sausage), used in this example is also included with this gem ;)
+`$container.masonry( 'appended', $newElems, true );`
+
+See [Create-Infinite-Scrolling-with-jQuery](https://github.com/amatsuda/kaminari/wiki/How-To:-Create-Infinite-Scrolling-with-jQuery) for another example.
+
+[Sausage](https://github.com/christophercliff/sausage) which used in this example is also included with this gem for convenience ;)
 
 Stylesheets: `sausage/sausage.css`and `sausage/sausage.reset.css`
 
 Javascript: `masonry/jquery.sausagemin.min.js`
 
 For more see [sausage info](http://christophercliff.github.com/sausage)
+
+The div with a class of 'page' is important for sausage. It is used to determine the different pages for the navigation on the right.
+
+```html
+<div id="container" class="transitions-enabled infinite-scroll clearfix">
+  <div class='page'>
+    <%= render @articles %>
+  </div>
+</div>
+```
+
+```html
+<div class='article box col<%= article.size %>'>
+  <h3><%= article.title %></h3>
+  <div class='author'>by <%= article.author %></div>
+  <div class='date'>by <%= article.created_at.to_s(:long) %></div>
+  <p>
+    <%= article.body %>
+  </p>
+</div>
+```
+
+Where `article.size` returns a valid col size, fx 1 to 5.
+
+```javascript
+(function() {
+  var page = 1,
+      loading = false;
+
+  function nearBottomOfPage() {
+    return $(window).scrollTop() > $(document).height() - $(window).height() - 200;
+  }
+
+  $(window).scroll(function(){
+    if (loading) {
+      return;
+    }
+
+    if(nearBottomOfPage()) {
+      loading=true;
+      page++;
+      $.ajax({
+        url: '/articles?page=' + page,
+        type: 'get',
+        dataType: 'script',
+        success: function() {
+          $(window).sausage('draw');
+          loading=false;
+        }
+      });
+    }
+  });
+
+  $(window).sausage();
+}());
+```
+
+It checks if the user scrolled to the bottom of the page. If that is the case, an ajax-request is sent to the `ArticlesController requesting the next page. After the ajax-request is completed successfully the sausage-navigation is redrawn.
+
+When the ajax-request is sent to the ArticlesController we need to append the next page of articles. We need to create a file named `index.js.erb` to achieve this goal.
+
+```javascript
+$("#container").append("<div class='page'><%= escape_javascript(render(@articles)) %></div>");
+```
 
 Note: You need to configure Jquery UI to use sausage.
 
