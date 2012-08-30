@@ -10,6 +10,13 @@ This gem includes:
 
 * jquery masonry
 * jquery imagesLoaded
+* jquery infinitescroll
+* jquery event drag
+
+For random content generation
+
+* box maker
+* loremimages
 
 ## Usage
 
@@ -44,10 +51,18 @@ Use these stylesheets as a base in order to play around with different effects..
 Optional
 
 ```javascript
-// require masonry/box-maker
+// require masonry/jquery.event-drag
+// require masonry/jquery.imagesloaded.min
+// require masonry/jquery.infinitescroll.min
 // require masonry/modernizr-transitions
-// require masonry/jquery.event.drag-2.2
 ```
+
+Content generation helpers:
+
+```javascript
+// require masonry/box-maker
+// require masonry/jquery.loremimages.min
+``
 
 See examples on [masonry](http://masonry.desandro.com/docs/intro.html) or [github](https://github.com/desandro/masonry)
 
@@ -373,7 +388,7 @@ See [repo](http://desandro.github.com/imagesloaded/)
 A jQuery plugin that triggers a callback after all the selected/child images have been loaded. Because you can't do `.load()` on cached images.
 
 ```javascript
-// require imagesLoaded/jquery.imagesloaded.min
+// require masonry/jquery.imagesloaded.min
 ```
 
 Also included is the [loremimages plugin](http://darsa.in/loremImages/), useful for testing purposes ;)
