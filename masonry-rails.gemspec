@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "masonry-rails"
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
@@ -72,6 +72,8 @@ Gem::Specification.new do |s|
     "vendor/assets/javascripts/masonry/jquery.loremimages.min.js",
     "vendor/assets/javascripts/masonry/jquery.masonry.js",
     "vendor/assets/javascripts/masonry/jquery.masonry.min.js",
+    "vendor/assets/javascripts/masonry/jquery.pageless.js",
+    "vendor/assets/javascripts/masonry/jquery.pageless.min.js",
     "vendor/assets/javascripts/masonry/modernizr-transitions.js",
     "vendor/assets/stylesheets/masonry/basic.css",
     "vendor/assets/stylesheets/masonry/centered.css",
