@@ -385,6 +385,21 @@ In the above example, to enable paging simply have the `pages/2.html` link respo
 
 `$container.masonry( 'appended', $newElems, true );`
 
+In the page returned, ensure it contains a `#pagenav` element with a link to the next page.
+
+```javascript
+function( newElements ) {
+  // `this` matches the element you called the plugin on (fx. #container)
+  
+  // get new #page-nav
+  var nexPageNav = $(this).find('#page-nav');
+
+  // substitute current #page-nav with new #page-nav from page loaded
+  $('#page-nav').replaceWith(nexPageNav);
+
+  # ...
+```
+
 See [Create-Infinite-Scrolling-with-jQuery](https://github.com/amatsuda/kaminari/wiki/How-To:-Create-Infinite-Scrolling-with-jQuery) for another example.
 
 [Sausage](https://github.com/christophercliff/sausage) which used in this example is also included with this gem for convenience ;)
