@@ -377,6 +377,20 @@ Or whichever animated loader icon you want to use ;)
 }
 ```
 
+### Kaminary paging
+
+You can combine masonry infinite scroll with Kaminari using suggestions here:
+
+[Create-Infinite-Scrolling-with-jQuery](https://github.com/amatsuda/kaminari/wiki/How-To:-Create-Infinite-Scrolling-with-jQuery)
+
+[railscast-endless-page](http://railscasts.com/episodes/114-endless-page-revised)
+
+### jQuery pageless
+
+[jquery pageless](https://github.com/jney/jquery.pageless) could also be used...
+
+The jquery pageless plugin is now provided as `masonry/jquery.pageless.min.js`. The [repo]((https://github.com/jney/jquery.pageless) demonstrates how to use pageless with Rails 3.
+
 ## Use with images
 
 See [image demo](http://masonry.desandro.com/demos/images.html) which uses *imagesLoaded* plugin (included - see below)
