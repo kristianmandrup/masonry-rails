@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "masonry-rails"
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-30"
+  s.date = "2012-09-17"
   s.description = "Masonry will rock your world!"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -64,6 +64,8 @@ Gem::Specification.new do |s|
     "spec/index.html",
     "spec/spec_helper.rb",
     "vendor/assets/images/masonry/loader.gif",
+    "vendor/assets/javascripts/jquery.isotope.js",
+    "vendor/assets/javascripts/jquery.isotope.min.js",
     "vendor/assets/javascripts/masonry/box-maker.js",
     "vendor/assets/javascripts/masonry/jquery.event-drag.js",
     "vendor/assets/javascripts/masonry/jquery.imagesloaded.js",
@@ -77,6 +79,11 @@ Gem::Specification.new do |s|
     "vendor/assets/javascripts/masonry/jquery.sausage.js",
     "vendor/assets/javascripts/masonry/jquery.sausage.min.js",
     "vendor/assets/javascripts/masonry/modernizr-transitions.js",
+    "vendor/assets/stylesheets/isotope.css",
+    "vendor/assets/stylesheets/isotope/base.css",
+    "vendor/assets/stylesheets/isotope/colorshapes.css",
+    "vendor/assets/stylesheets/isotope/elements.css",
+    "vendor/assets/stylesheets/isotope/options.css",
     "vendor/assets/stylesheets/masonry/basic.css",
     "vendor/assets/stylesheets/masonry/centered.css",
     "vendor/assets/stylesheets/masonry/fluid.css",
