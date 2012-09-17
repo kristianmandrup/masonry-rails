@@ -1,0 +1,37 @@
+/* Color shapes */
+
+.color-shape {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  float: left;
+}
+ 
+.color-shape.round {
+  -webkit-border-radius: 35px;
+     -moz-border-radius: 35px;
+          border-radius: 35px;
+}
+ 
+.color-shape.big.round {
+  -webkit-border-radius: 75px;
+     -moz-border-radius: 75px;
+          border-radius: 75px;
+}
+ 
+.color-shape.red { background: red; }
+.color-shape.blue { background: blue; }
+.color-shape.yellow { background: yellow; }
+ 
+.color-shape.wide, .color-shape.big { width: 150px; }
+.color-shape.tall, .color-shape.big { height: 150px; }
+
+.color-shape a {
+  display: block;
+  height: 100%;
+}
+
+.color-shape a:hover {
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.5 );
+}

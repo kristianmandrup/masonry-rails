@@ -13,10 +13,27 @@ This gem includes:
 * jquery infinitescroll
 * jquery event drag
 
+Now [Isotope](http://isotope.metafizzy.co/index.html) is also included. Masonry and Isotope can even be used in combination!
+
 For random content generation
 
 * box maker
 * loremimages
+
+## Isotope assets
+
+Javascript
+
+* jquery.isotope.js
+* jquery.isotope.min.js
+
+Stylesheets
+
+* isotope.css
+
+More stylesheets in `isotope` folder in `vendor/assets
+
+Please see Isotope [License](http://isotope.metafizzy.co/docs/license.html) for commercial use.
 
 ## Usage
 
@@ -300,7 +317,7 @@ Put a `<nav>` under your main container. This will trigger loading the next page
 </nav>
 ```
 
-The link should load in a page containing elements that match `.block`
+The link should load in a page containing elements that match `.box`
 
 ```html
 <div class="box col3">
