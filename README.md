@@ -13,27 +13,36 @@ This gem includes:
 * jquery infinitescroll
 * jquery event drag
 
-Now [Isotope](http://isotope.metafizzy.co/index.html) is also included. Masonry and Isotope can even be used in combination!
-
 For random content generation
 
 * box maker
 * loremimages
 
-## Isotope assets
+## Isotope
+
+[Isotope](http://isotope.metafizzy.co/index.html) is also included. Isotope is very similar to Masonry and might be a nice alternative for some use cases. Why it is included ;)
+
+### Isotope assets
 
 Javascript
 
 * jquery.isotope.js
 * jquery.isotope.min.js
 
+Extras:
+
+* jquery.debounced_resize.min.js
+* jquery.throttled_resize.min.js
+
 Stylesheets
 
 * isotope.css
 
-More stylesheets in `isotope` folder in `vendor/assets
+More isotope related stylesheets in `isotope` folder in `vendor/assets. Use as inspiration...
 
 Please see Isotope [License](http://isotope.metafizzy.co/docs/license.html) for commercial use.
+
+Usage: See [Getting started](http://isotope.metafizzy.co/docs/introduction.html#getting_started)
 
 ## Usage
 
