@@ -71,24 +71,24 @@ Use these stylesheets as a base in order to play around with different effects..
 ### Javascript
 
 ```javascript
-// require masonry/jquery.masonry
+//= require masonry/jquery.masonry
 ```
 
 Optional
 
 ```javascript
-// require masonry/jquery.event-drag
-// require masonry/jquery.imagesloaded.min
-// require masonry/jquery.infinitescroll.min
-// require masonry/modernizr-transitions
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
 ```
 
 Content generation helpers:
 
 ```javascript
-// require masonry/box-maker
-// require masonry/jquery.loremimages.min
-``
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+```
 
 See examples on [masonry](http://masonry.desandro.com/docs/intro.html) or [github](https://github.com/desandro/masonry)
 
@@ -307,7 +307,7 @@ Or simply include `masonry/modernizr-transitions` in your javascript manifest.
 Use with [infinite-scroll](https://github.com/paulirish/infinite-scroll) which is included for convenience. All credits & license rights (MIT) to Paul Irish.
 
 ```javascript
-// require masonry/jquery.infinitescroll.min
+//= require masonry/jquery.infinitescroll.min
 ```
 
 See [infinite-scroll-jquery-plugin](http://www.infinite-scroll.com/infinite-scroll-jquery-plugin/) for configuration info.
@@ -521,7 +521,7 @@ See [repo](http://desandro.github.com/imagesloaded/)
 A jQuery plugin that triggers a callback after all the selected/child images have been loaded. Because you can't do `.load()` on cached images.
 
 ```javascript
-// require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.imagesloaded.min
 ```
 
 Also included is the [loremimages plugin](http://darsa.in/loremImages/), useful for testing purposes ;)
