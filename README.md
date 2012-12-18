@@ -99,7 +99,7 @@ We will use the _infinite scroll_ example for a full walkthrough of how to setup
 *Main container*
 
 ```html
-<div id="container" class="transitions-enabled infinite-scroll clearfix">
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
 
   <div class="box col3">
 
@@ -116,8 +116,10 @@ We will use the _infinite scroll_ example for a full walkthrough of how to setup
 </div>
 ```
 
+Note: We use the ID `masonry-container` in order to ensure against conflicts with other "plugins". Twitter Bootstrap, f.ex reserves the class names `container` and `container-fluid` for particular (container) layouts.
+
 ```css
-#container {
+#masonry-container {
   background: #FFF;
   padding: 5px;
   margin-bottom: 20px;
@@ -158,7 +160,7 @@ Example:
 ```javascript
 $(function(){
   
-  $('#container').masonry({
+  $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 100,
     gutterWidth: 40
@@ -178,7 +180,7 @@ See `masonry/right-to-left.css`
 ```javascript
 $(function(){
   
-  $('#container').masonry({
+  $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 100,
     isAnimated: !Modernizr.csstransitions,
@@ -208,7 +210,7 @@ See `masonry/centered.css`
 
 ```javascript
 $(function(){  
-  $('#container').masonry({
+  $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 200,
     isAnimated: !Modernizr.csstransitions,
@@ -223,7 +225,7 @@ $(function(){
 For fluid or responsive layouts, where the width of the column is a percentage of the container's width, you can pass in a function for `columnWidth`.
 
 ```javascript
-$('#container').masonry({
+$('#masonry-container').masonry({
   itemSelector: '.box',
   // set columnWidth a fraction of the container width
   columnWidth: function( containerWidth ) {
@@ -292,7 +294,7 @@ In your CSS, add transition styles below. The Masonry plugin will add a class of
 To get the best of both worlds, you can use *Modernizr* to detect browser support for CSS transitions. Add the transitions styles above, then enable animated based on Modernizr’s detected support for transitions. This will allow browsers that support *CSS transitions* to use them, and browsers without support to use *jQuery animation*.
 
 ```javascript
-$('#container').masonry({
+$('#masonry-container').masonry({
   // options...
   isAnimated: !Modernizr.csstransitions
 });
@@ -345,7 +347,7 @@ These will be appended at the bottom of the `#container`. If you are using searc
 ```javascript
 $(function(){
   
-  var $container = $('#container');
+  var $container = $('#masonry-container');
   
   $container.imagesLoaded(function(){
     $container.masonry({
@@ -439,7 +441,7 @@ For more see [sausage info](http://christophercliff.github.com/sausage)
 The div with a class of 'page' is important for sausage. It is used to determine the different pages for the navigation on the right.
 
 ```html
-<div id="container" class="transitions-enabled infinite-scroll clearfix">
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
   <div class='page'>
     <%= render @articles %>
   </div>
@@ -497,7 +499,7 @@ It checks if the user scrolled to the bottom of the page. If that is the case, a
 When the ajax-request is sent to the ArticlesController we need to append the next page of articles. We need to create a file named `index.js.erb` to achieve this goal.
 
 ```javascript
-$("#container").append("<div class='page'><%= escape_javascript(render(@articles)) %></div>");
+$("#masonry-container").append("<div class='page'><%= escape_javascript(render(@articles)) %></div>");
 ```
 
 Note: You need to configure Jquery UI to use sausage.
