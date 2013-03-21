@@ -1,5 +1,5 @@
 /**
- * jQuery Masonry v2.1.05
+ * jQuery Masonry v2.1.08
  * A dynamic layout plugin for jQuery
  * The flip-side of CSS Floats
  * http://masonry.desandro.com
@@ -45,7 +45,8 @@
 
       if ( resizeTimeout ) { clearTimeout( resizeTimeout ); }
       resizeTimeout = setTimeout(function() {
-        $.event.handle.apply( context, args );
+        $event.dispatch.apply( context, args );
+
       }, execAsap === "execAsap"? 0 : 100 );
     }
   };
@@ -69,9 +70,6 @@
 
   $.Mason.settings = {
     isResizable: true,
-    isDraggable: false,
-    dragHandleSelector: null,
-    dragClass: null,
     isAnimated: false,
     animationOptions: {
       queue: false,
@@ -123,9 +121,11 @@
 
       this.horizontalDirection = this.options.isRTL ? 'right' : 'left';
 
+      var x = this.element.css( 'padding-' + this.horizontalDirection );
+      var y = this.element.css( 'padding-top' );
       this.offset = {
-        x: parseInt( this.element.css( 'padding-' + this.horizontalDirection ), 10 ),
-        y: parseInt( this.element.css( 'padding-top' ), 10 )
+        x: x ? parseInt( x, 10 ) : 0,
+        y: y ? parseInt( y, 10 ) : 0
       };
       
       this.isFluid = this.options.columnWidth && typeof this.options.columnWidth === 'function';
@@ -147,14 +147,8 @@
       // need to get bricks
       this.reloadItems();
 
-      // set up dragging
-      if (this.options.isDraggable ){
-        this._initDrag(this.$bricks);
-      }
-
     },
-
-
+  
     // _init fires when instance is first created
     // and when instance is triggered again -> $el.masonry();
     _init : function( callback ) {
@@ -391,180 +385,6 @@
       
       $(window).unbind('.masonry');
 
-    },
-
-    _getDistanceBetween : function(point1, point2){
-        var dx = point1.x - point2.x,
-            dy = point1.y - point2.y;
-        return Math.sqrt(dx*dx + dy*dy);
-    },
-
-    _getBrickPoint : function($brick){
-      var offset = $brick.offset();
-      return {
-        $brick: $brick,
-        x  : offset.left + ($brick.outerWidth()/2),
-        y : offset.top + ($brick.outerHeight()/2)
-      };
-    },
-
-    _getClosestBrick : function(brick){
-
-      var $brick = $(brick),
-          _this = this,
-          dPoint = this._getBrickPoint($brick),
-          closest = null,
-          point, dist, $b, last, midpoint;
-
-      // find the index of the closest brick
-      this.$bricks.each(function(i, b){
-
-        $b = $(b);
-        point = _this._getBrickPoint($b);
-
-        // first check the distance from the brick center
-        dist = _this._getDistanceBetween(dPoint, point);
-
-        if(closest === null || dist < closest.dist){
-          closest = {
-            dist: dist,
-            $brick: $b,
-            index: (point.x > dPoint.x) ? i : i+1
-          };
-        }
-
-        // get the distance between the center of the line
-        // connecting the current and last block
-        if(typeof last !== 'undefined'){
-          midpoint = {
-            x : (last.x + point.x) / 2,
-            y : (last.y + point.y) / 2
-          };
-          dist = _this._getDistanceBetween(dPoint, midpoint);
-          if(dist < closest.dist){
-            closest = {
-              dist: dist,
-              $brick: $b,
-              index: (point.x > dPoint.x) ? i : i+1
-            };
-          }
-        }
-
-        last = point;
-
-      });
-
-      return closest;
-    },
-
-    _createGhostBrick : function($brick){
-
-        var closest = this._getClosestBrick($brick),
-            $ghost  = $brick.clone().html('').addClass('drag-ghost'),
-            pos     = $brick.position();
-
-        $ghost.css({
-          width     : $brick.width(),
-          height    : $brick.height()
-        });
-
-        this.$bricks.splice(closest.index, 0, $ghost[0]);
-        this.element.append($ghost);
-        this._reLayout();
-
-        return closest.index;
-    },
-
-    _initDrag : function($bricks){
-
-      var _this = this,
-          dragged = null,
-          pos, closest, 
-          ghostInterval = null, 
-          ghostIndex = -1, 
-          ghostTime, ghostReset;
-
-      $bricks.bind('dragstart', function(e) {
-
-        // make sure we're dragging by the right thing
-        if(_this.options.dragHandleSelector !== null 
-          && !$(e.target).is(_this.options.dragHandleSelector)){
-          return false;
-        }
-
-        pos = $(this).position();
-
-        // add the dragClass
-        if(_this.options.dragClass !== null){
-          $(this).addClass(_this.options.dragClass);
-        }
-
-        // remove the brick being dragged from the array
-        dragged = this;
-        _this.$bricks = _this.$bricks.not(this);
-        _this._reLayout();
-
-        ghostTime = ghostReset = new Date().getTime();
-
-        ghostInterval = setInterval(function(){
-          if(ghostReset !== ghostTime){
-            if(ghostIndex !== -1){
-
-              // this kinda sucks because it doesn't use the original
-              // position of the bricks
-              if(_this._getClosestBrick($(dragged)).index === ghostIndex){
-                return;
-              }
-
-              $(_this.$bricks.splice(ghostIndex,1)).fadeOut(function(){
-                $(this).remove();
-              });
-              ghostIndex = -1;
-              _this._reLayout();
-            }
-            if(new Date().getTime() - ghostReset > 200){
-              ghostIndex = _this._createGhostBrick($(dragged));
-              ghostTime = ghostReset;
-            }
-          }
-        }, 100);
-
-      }).bind('drag', function(e, dd) {
-
-        $(this).css({
-          top  : pos.top  + dd.deltaY,
-          left : pos.left + dd.deltaX
-        });
-
-        ghostReset = new Date().getTime();
-
-      }).bind('dragend', function(e) {
-
-        // clear the ghosting interval
-        clearInterval(ghostInterval);
-      
-        // remove the dragClass
-        if(_this.options.dragClass !== null){
-          $(this).removeClass(_this.options.dragClass);
-        }
-
-        // insert the brick back into the array
-        if(ghostIndex !== -1) {
-          var $ghost = $(_this.$bricks[ghostIndex]);
-          $ghost.fadeOut(function(){
-            $ghost.remove();
-          });
-          _this.$bricks[ghostIndex] = dragged;
-          ghostIndex = -1;
-        } else {
-          closest = _this._getClosestBrick(dragged);
-          _this.$bricks.splice(closest.index , 0, dragged);
-        }
-        dragged = null;
-
-
-        _this._reLayout();
-      });
     }
     
   };

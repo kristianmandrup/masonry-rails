@@ -6,6 +6,14 @@ Using fork from [masonry](https://github.com/kristianmandrup/masonry)
 
 See more Masonry info at [masonry README](https://github.com/desandro/masonry/README.mdown)
 
+Versions: 
+Currently uses *jQuery Masonry v2.1.08* and *Isotope 1.5.25*
+
+* [isotope](https://github.com/desandro/isotope)
+* [masonry](https://github.com/desandro/masonry)
+
+Please notify if you have any problems ;)
+
 This gem includes:
 
 * jquery masonry
