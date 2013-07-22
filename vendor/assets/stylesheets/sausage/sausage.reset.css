@@ -14,7 +14,7 @@ http://developer.yahoo.com/yui/license.html
 version: 3.3.0
 build: 3167
 */
-.sausage-set {font:13px/1.231 'Hevetica Neueu', Helvetica, Arial, sans-serif;*font-size:small;*font:x-small;} .sausage-set select, .sausage-set input, .sausage-set button, .sausage-set textarea{font:99% "lucida grande", .sausage-set tahoma, .sausage-set verdana, .sausage-set arial, .sausage-set sans-serif;} .sausage-set table{font-size:inherit;font:100%;} .sausage-set pre, .sausage-set code, .sausage-set kbd, .sausage-set samp, .sausage-set tt{font-family:monospace;*font-size:108%;line-height:100%;}
+.sausage-set {font:13px/1.231 'Hevetica Neueu', Helvetica, Arial, sans-serif;*font-size:small;*font:x-small;} .sausage-set select, .sausage-set input, .sausage-set button, .sausage-set textarea{font:99% "lucida grande", tahoma, verdana, arial, sans-serif;} .sausage-set table{font-size:inherit;font:100%;} .sausage-set pre, .sausage-set code, .sausage-set kbd, .sausage-set samp, .sausage-set tt{font-family:monospace;*font-size:108%;line-height:100%;}
 
 /*
 Copyright (c) 2010, .reset  Yahoo! Inc. All rights reserved.
@@ -32,4 +32,4 @@ http://developer.yahoo.com/yui/license.html
 version: 3.3.0
 build: 3167
 */
-.reset {font:13px/1.231 Georgia, sans-serif;*font-size:small;*font:x-small;} .reset select, .reset input, .reset button, .reset textarea{font:99% "lucida grande", .reset tahoma, .reset verdana, .reset arial, .reset sans-serif;} .reset table{font-size:inherit;font:100%;} .reset pre, .reset code, .reset kbd, .reset samp, .reset tt{font-family:monospace;*font-size:108%;line-height:100%;}
+.reset {font:13px/1.231 Georgia, sans-serif;*font-size:small;*font:x-small;} .reset select, .reset input, .reset button, .reset textarea{font:99% "lucida grande", tahoma, verdana, arial, sans-serif;} .reset table{font-size:inherit;font:100%;} .reset pre, .reset code, .reset kbd, .reset samp, .reset tt{font-family:monospace;*font-size:108%;line-height:100%;}
