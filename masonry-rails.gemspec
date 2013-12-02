@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "masonry-rails"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2013-03-21"
+  s.date = "2013-12-02"
   s.description = "Masonry will rock your world!"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
