@@ -102,7 +102,7 @@ See examples on [masonry](http://masonry.desandro.com/docs/intro.html) or [githu
 
 ### Setup
 
-We will use the _infinite scroll_ example for a full walkthrough of how to setup and use Masonry. We add the classes `transitions-enabled`and `infinite-scroll` to the container in order to enable these two effects simultaneously. Look further down in this guide to see configurations of other effects that canbe combined ;)
+We will use the _infinite scroll_ example for a full walkthrough of how to setup and use Masonry. We add the classes `transitions-enabled`and `infinite-scroll` to the container in order to enable these two effects simultaneously. Look further down in this guide to see configurations of other effects that can be combined ;)
 
 *Main container*
 
@@ -110,6 +110,8 @@ We will use the _infinite scroll_ example for a full walkthrough of how to setup
 <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
 
   <div class="box col3">
+    ...
+  </div>
 
   <div class="box col1">
     <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p>
@@ -124,7 +126,7 @@ We will use the _infinite scroll_ example for a full walkthrough of how to setup
 </div>
 ```
 
-Note: We use the ID `masonry-container` in order to ensure against conflicts with other "plugins". Twitter Bootstrap, f.ex reserves the class names `container` and `container-fluid` for particular (container) layouts.
+Note: We use the ID `masonry-container` in order to ensure against conflicts with other "plugins". Twitter Bootstrap, for example, reserves the class names `container` and `container-fluid` for particular (container) layouts.
 
 ```css
 #masonry-container {
@@ -181,7 +183,7 @@ Add class `has-gutters` to container for this effect.
 
 ## Right to left
 
-Enable right-to-layout by setting the `isRTL` option to true.
+Enable right-to-left layout by setting the `isRTL` option to true.
 
 See `masonry/right-to-left.css`
 
@@ -250,7 +252,7 @@ Transitions used in examples
 
 Note: use `masonry/transitions.css` for a head start!
 
-Noice the class names: `.transitions-enabled`, `masonry` and `.masonry-brick`.
+Notice the class names: `.transitions-enabled`, `masonry` and `.masonry-brick`.
 
 ```css
 .transitions-enabled.masonry,
@@ -388,7 +390,7 @@ $(function(){
 });
 ```
 
-The loader should be "on top". Here the loader iscon is configured in the `loading` object as `http://i.imgur.com/6RMhx.gif`. This loader is included as an image asset at `assets/images/masonry/loader.gif`. So instead simply use: 
+The loader should be "on top". Here the loader is configured in the `loading` object as `http://i.imgur.com/6RMhx.gif`. This loader is included as an image asset at `assets/images/masonry/loader.gif`. So instead simply use: 
 
 `img: '/assets/masonry/loader.gif'` 
 
@@ -510,7 +512,7 @@ When the ajax-request is sent to the ArticlesController we need to append the ne
 $("#masonry-container").append("<div class='page'><%= escape_javascript(render(@articles)) %></div>");
 ```
 
-Note: You need to configure Jquery UI to use sausage.
+Note: You need to configure jQuery UI to use sausage.
 
 See: [railscast-endless-page](http://railscasts.com/episodes/114-endless-page-revised) for how to use endless pages with Rails using *will_paginate* gem.
 
