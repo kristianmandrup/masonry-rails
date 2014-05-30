@@ -50,7 +50,7 @@ More isotope related stylesheets in `isotope` folder in `vendor/assets. Use as i
 
 Please see Isotope [License](http://isotope.metafizzy.co/docs/license.html) for commercial use.
 
-Usage: See [Getting started](http://isotope.metafizzy.co/docs/introduction.html#getting_started)
+Usage: See [Getting started](http://isotope.metafizzy.co/#getting-started)
 
 ## Usage
 
