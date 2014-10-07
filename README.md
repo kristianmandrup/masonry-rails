@@ -26,11 +26,21 @@ For random content generation
 * box maker
 * loremimages
 
+Latest masonry 3.1.5
+
+* masonry.min
+
+layouts (in `masonry/layouts` folder)
+
+* layout/horizontal
+
 ## Isotope
 
 [Isotope](http://isotope.metafizzy.co/index.html) is also included. Isotope is very similar to Masonry and might be a nice alternative for some use cases. Why it is included ;)
 
 ### Isotope assets
+
+all found in the `isotope` folder
 
 Javascript
 
@@ -41,6 +51,21 @@ Extras:
 
 * jquery.debounced_resize.min.js
 * jquery.throttled_resize.min.js
+
+For latest isotope 2.0
+
+* isotope
+* layout-mode
+* item
+
+layouts (in `isotope/layouts` folder)
+
+* layout/cells-by-column
+* layout/cells-by-row
+* layout/fit-columns
+* layout/horizontal
+* layout/packery
+
 
 Stylesheets
 
@@ -78,8 +103,16 @@ Use these stylesheets as a base in order to play around with different effects..
 
 ### Javascript
 
+*masonry*
+
 ```javascript
 //= require masonry/jquery.masonry
+```
+
+To use latest *masonry 3.1.5* without jQuery
+
+```javascript
+//= require masonry/masonry
 ```
 
 Optional
@@ -99,6 +132,14 @@ Content generation helpers:
 ```
 
 See examples on [masonry](http://masonry.desandro.com/docs/intro.html) or [github](https://github.com/desandro/masonry)
+
+*isotope*
+
+All isotope scripts are in the `isotope` folder
+
+```javascript
+//= require isotope/jquery.isotope
+```
 
 ### Setup
 
