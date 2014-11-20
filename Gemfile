@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'rails'
+gem 'railties'
 
 group :development do
   gem "rspec",    "> 2.10.0"
