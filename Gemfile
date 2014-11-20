@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
+gem 'railties'
+
 group :development do
   gem "rspec",    '~> 2.10', '> 2.10.0'
   gem "rdoc",     '~> 4.0', '> 4.0.0'
