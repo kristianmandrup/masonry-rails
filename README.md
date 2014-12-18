@@ -6,7 +6,7 @@ Using fork from [masonry](https://github.com/kristianmandrup/masonry)
 
 See more Masonry info at [masonry README](https://github.com/desandro/masonry/README.mdown)
 
-Versions: 
+Versions:
 Currently uses *jQuery Masonry v2.1.08* and *Isotope 1.5.25*
 
 * [isotope](https://github.com/desandro/isotope)
@@ -26,7 +26,7 @@ For random content generation
 * box maker
 * loremimages
 
-Latest masonry 3.1.5
+Latest masonry 3.2.2
 
 * masonry.min
 
@@ -83,7 +83,7 @@ In Gemfile
 
 `gem 'masonry-rails'`
 
-### CSS 
+### CSS
 
 You can include stylesheets extracted from the masonry examples directly:
 
@@ -109,11 +109,16 @@ Use these stylesheets as a base in order to play around with different effects..
 //= require masonry/jquery.masonry
 ```
 
-To use latest *masonry 3.1.5* without jQuery
+To use latest *masonry 3.2.2* without jQuery
 
 ```javascript
 //= require masonry/masonry
 ```
+or the minify version
+```javascript
+//= require masonry/masonry.min
+```
+
 
 Optional
 
@@ -210,13 +215,13 @@ Example:
 
 ```javascript
 $(function(){
-  
+
   $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 100,
     gutterWidth: 40
   });
-  
+
 });
 ```
 
@@ -230,14 +235,14 @@ See `masonry/right-to-left.css`
 
 ```javascript
 $(function(){
-  
+
   $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 100,
     isAnimated: !Modernizr.csstransitions,
     isRTL: true
   });
-  
+
 });
 ```
 
@@ -260,14 +265,14 @@ See `masonry/centered.css`
 ```
 
 ```javascript
-$(function(){  
+$(function(){
   $('#masonry-container').masonry({
     itemSelector: '.box',
     columnWidth: 200,
     isAnimated: !Modernizr.csstransitions,
     isFitWidth: true
   });
-  
+
 });
 ```
 
@@ -289,7 +294,7 @@ Use `masonry/fluid.css` for a head start!
 
 ## Animated transitions
 
-Transitions used in examples 
+Transitions used in examples
 
 Note: use `masonry/transitions.css` for a head start!
 
@@ -397,18 +402,18 @@ These will be appended at the bottom of the `#container`. If you are using searc
 
 ```javascript
 $(function(){
-  
+
   var $container = $('#masonry-container');
-  
+
   $container.imagesLoaded(function(){
     $container.masonry({
       itemSelector: '.box',
       columnWidth: 100
     });
   });
-  
+
   $container.infinitescroll({
-    navSelector  : '#page-nav',    // selector for the paged navigation 
+    navSelector  : '#page-nav',    // selector for the paged navigation
     nextSelector : '#page-nav a',  // selector for the NEXT link (to page 2)
     itemSelector : '.box',     // selector for all items you'll retrieve
     loading: {
@@ -424,22 +429,22 @@ $(function(){
       $newElems.imagesLoaded(function(){
         // show elems now they're ready
         $newElems.animate({ opacity: 1 });
-        $container.masonry( 'appended', $newElems, true ); 
+        $container.masonry( 'appended', $newElems, true );
       });
     }
   );
 });
 ```
 
-The loader should be "on top". Here the loader is configured in the `loading` object as `http://i.imgur.com/6RMhx.gif`. This loader is included as an image asset at `assets/images/masonry/loader.gif`. So instead simply use: 
+The loader should be "on top". Here the loader is configured in the `loading` object as `http://i.imgur.com/6RMhx.gif`. This loader is included as an image asset at `assets/images/masonry/loader.gif`. So instead simply use:
 
-`img: '/assets/masonry/loader.gif'` 
+`img: '/assets/masonry/loader.gif'`
 
 Or whichever animated loader icon you want to use ;)
 
 ```css
 /* Infinite Scroll loader */
-#infscr-loading { 
+#infscr-loading {
   text-align: center;
   z-index: 100;
   position: fixed;
@@ -447,7 +452,7 @@ Or whichever animated loader icon you want to use ;)
   bottom: 40px;
   width: 200px;
   padding: 10px;
-  background: #000; 
+  background: #000;
   opacity: 0.8;
   color: #FFF;
   -webkit-border-radius: 10px;
@@ -469,7 +474,7 @@ In the page returned, ensure it contains a `#pagenav` element with a link to the
 ```javascript
 function( newElements ) {
   // `this` matches the element you called the plugin on (fx. #container)
-  
+
   // get new #page-nav
   var nexPageNav = $(this).find('#page-nav');
 
@@ -582,7 +587,7 @@ Also included is the [loremimages plugin](http://darsa.in/loremImages/), useful 
 + [**View contributors**](https://github.com/desandro/imagesloaded/contributors)
 
 ## Contributing to masonry-rails
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
