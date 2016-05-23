@@ -9,7 +9,7 @@ layout: default
   
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   itemSelector: '.box',
   // set columnWidth a fraction of the container width
   columnWidth: function( containerWidth ) {
@@ -21,7 +21,7 @@ $('#container').masonry({
 
 </div>
 
-<div id="container" class="clearfix fluid">
+<div id="masonry-container" class="clearfix fluid">
 
   <div class="box col1">
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
@@ -199,7 +199,7 @@ $('#container').masonry({
     <p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 
 <script src="../{{ site.jquery_js }}"></script>
@@ -207,7 +207,7 @@ $('#container').masonry({
 <script>
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       // set columnWidth a fraction of the container width
       columnWidth: function( containerWidth ) {

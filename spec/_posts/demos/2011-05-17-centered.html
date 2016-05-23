@@ -11,7 +11,7 @@ has_modernizr: true
   <p>This layout is centered by setting <code>isFitWidth: true</code> and adding necessary CSS position styles <code>margin: 0 auto;</code>.</p>
 </div>
 
-<div id="container" class="transitions-enabled centered clearfix">
+<div id="masonry-container" class="transitions-enabled centered clearfix">
 
   <div class="box col2">
     <p>Sit amet mi ullamcorper vehicula</p>
@@ -119,14 +119,14 @@ has_modernizr: true
     <p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <script src="../{{ site.jquery_js }}"></script>
 <script src="../{{ site.masonry_js }}"></script>
 <script>
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       columnWidth: 200,
       isAnimated: !Modernizr.csstransitions,

@@ -8,7 +8,7 @@ layout: default
   <p>Masonry integrates well with auto-paging scripts like <a href="http://infinite-scroll.com/">Infinite Scroll</a> by <a href="http://paulirish.com">Paul Irish</a>. Using the <a href="../docs/methods.html#appended"><code>appended</code> method</a>, Masonry will position only the newly appended elements, and skip over all the previous elements that are already in their proper position, thus saving precious milliseconds of page load time. This demo also makes use of the <code>isAnimatedFromBottom</code> flag.</p>
 </div>
 
-<div id="container" class="transitions-enabled infinite-scroll clearfix">
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
 
   <div class="box col3">
     <p>
@@ -221,7 +221,7 @@ layout: default
     <p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <nav id="page-nav">
   <a href="../pages/2.html"></a>
@@ -233,7 +233,7 @@ layout: default
 <script>
   $(function(){
     
-    var $container = $('#container');
+    var $container = $('#masonry-container');
     
     $container.imagesLoaded(function(){
       $container.masonry({

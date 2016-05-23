@@ -9,7 +9,7 @@ layout: default
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   itemSelector: '.box',
   columnWidth: 100,
   isAnimated: true
@@ -19,7 +19,7 @@ $('#container').masonry({
 
 </div>
 
-<div id="container" class="clearfix">
+<div id="masonry-container" class="clearfix">
 
   <div class="box col2">
     <p>Sit amet mi ullamcorper vehicula</p>
@@ -127,14 +127,14 @@ $('#container').masonry({
     <p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <script src="../{{ site.jquery_js }}"></script>
 <script src="../{{ site.masonry_js }}"></script>
 <script>
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       columnWidth: 100,
       isAnimated: true

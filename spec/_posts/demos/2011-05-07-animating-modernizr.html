@@ -11,7 +11,7 @@ has_modernizr: true
   <p>This layout is animated with CSS transitions if the browser supports it, but falls back to jQuery animation if not available. Modernizr has been implemented to detect support. More details in <a href="../docs/animating.html#modernizr">Animating</a>.</p></p>
 </div>
 
-<div id="container" class="transitions-enabled clearfix">
+<div id="masonry-container" class="transitions-enabled clearfix">
 
   <div class="box col2">
     <p>Sit amet mi ullamcorper vehicula</p>
@@ -119,14 +119,14 @@ has_modernizr: true
     <p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <script src="../{{ site.jquery_js }}"></script>
 <script src="../{{ site.masonry_js }}"></script>
 <script>
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       columnWidth: 100,
       isAnimated: !Modernizr.csstransitions

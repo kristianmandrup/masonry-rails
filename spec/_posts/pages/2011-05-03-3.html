@@ -9,7 +9,7 @@ has_modernizr: true
   <p>This is a page used for the <a href="../demos/infinite-scroll.html">Infinite Scroll example</a>.</p>
 </div>
 
-<div id="container" class="transitions-enabled clearfix">
+<div id="masonry-container" class="transitions-enabled clearfix">
   
   <div>
     <div class="box col2">
@@ -153,14 +153,14 @@ has_modernizr: true
 
 
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <script src="../{{ site.jquery_js }}"></script>
 <script src="../{{ site.masonry_js }}"></script>
 <script>
   $(function(){
     
-    var $container = $('#container');
+    var $container = $('#masonry-container');
     
     $container.imagesLoaded(function(){
       $container.masonry({

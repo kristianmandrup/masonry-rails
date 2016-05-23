@@ -9,7 +9,7 @@ layout: default
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   itemSelector: '.box',
   columnWidth: 100,
   cornerStampSelector: '.corner-stamp'
@@ -18,7 +18,7 @@ $('#container').masonry({
 {% endhighlight %}
 </div>
 
-<div id="container" class="clearfix">
+<div id="masonry-container" class="clearfix">
 	
 	<div class="corner-stamp">
 		I'm up in your layoutz.
@@ -201,7 +201,7 @@ $('#container').masonry({
     <p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 
 <script src="../{{ site.jquery_js }}"></script>
@@ -239,7 +239,7 @@ $('#container').masonry({
 
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       columnWidth: 100,
       cornerStampSelector: '.corner-stamp'

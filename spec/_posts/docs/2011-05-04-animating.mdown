@@ -18,7 +18,7 @@ To animate Masonry layout changes with jQuery, set the `isAnimated` option to `t
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   // options...
   isAnimated: true
 });
@@ -31,7 +31,7 @@ You can pass in jQuery animation options are set with the [`animationOptions` op
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   // options...
   isAnimated: true,
   animationOptions: {
@@ -88,7 +88,7 @@ To get the best of both worlds, you can use [Modernizr](http://www.modernizr.com
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   // options...
   isAnimated: !Modernizr.csstransitions
 });
