@@ -7,7 +7,7 @@ body {
   overflow-y: scroll;
 }
 
-#container {
+#masonry-container {
   background: #FFF;
   padding: 5px;
   margin-bottom: 20px;
