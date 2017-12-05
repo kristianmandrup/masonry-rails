@@ -26,7 +26,7 @@ For random content generation
 * box maker
 * loremimages
 
-Latest masonry 3.2.2
+Latest masonry 4.2.0
 
 * masonry.min
 
@@ -109,7 +109,7 @@ Use these stylesheets as a base in order to play around with different effects..
 //= require masonry/jquery.masonry
 ```
 
-To use latest *masonry 3.2.2* without jQuery
+To use latest *masonry 4.2.2* without jQuery
 
 ```javascript
 //= require masonry/masonry
