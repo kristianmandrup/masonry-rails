@@ -9,7 +9,7 @@ has_modernizr: true
   <p>The <a href="../docs/options.html#gutterwidth"><code>gutterWidth</code> option</a> adds additional spacing between columns, but not on the outer sides of the container.</p>
 </div>
 
-<div id="container" class="transitions-enabled has-gutters clearfix">
+<div id="masonry-container" class="transitions-enabled has-gutters clearfix">
 
   <div class="box col2">
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
@@ -191,7 +191,7 @@ has_modernizr: true
     <p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 
 <script src="../{{ site.jquery_js }}"></script>
@@ -199,7 +199,7 @@ has_modernizr: true
 <script>
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       columnWidth: 100,
       gutterWidth: 40

@@ -32,7 +32,7 @@
   <script src="jquery.masonry.js"></script>
 </head>
 <body>
-  <div id="container">
+  <div id="masonry-container">
     <div class="box-item"><div class="handle"></div>A</div>
     <div class="box-item"><div class="handle"></div>B</div>
     <div class="box-item bigger"><div class="handle"></div>C</div>
@@ -47,7 +47,7 @@
     <div class="box-item bigger"><div class="handle"></div>L</div>
   </div>​
   <script type="text/javascript">
-    $("#container").masonry({
+    $("#masonry-container").masonry({
       isAnimated  : true,
       isDraggable : true,
       dragHandleSelector: '.handle',

@@ -259,7 +259,7 @@ See `masonry/centered.css`
 ```
 
 ```html
-<div id="container" class="transitions-enabled centered clearfix masonry">
+<div id="masonry-container" class="transitions-enabled centered clearfix masonry">
   ...
 </div>
 ```
@@ -398,7 +398,7 @@ The link should load in a page containing elements that match `.box`
 </div>
 ```
 
-These will be appended at the bottom of the `#container`. If you are using search with paging, be sure to update the page counter after each load somehow.
+These will be appended at the bottom of the `#masonry-container`. If you are using search with paging, be sure to update the page counter after each load somehow.
 
 ```javascript
 $(function(){
@@ -473,7 +473,7 @@ In the page returned, ensure it contains a `#pagenav` element with a link to the
 
 ```javascript
 function( newElements ) {
-  // `this` matches the element you called the plugin on (fx. #container)
+  // `this` matches the element you called the plugin on (fx. #masonry-container)
 
   // get new #page-nav
   var nexPageNav = $(this).find('#page-nav');

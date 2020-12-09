@@ -9,7 +9,7 @@ layout: default
   <p>Container should be black. body should be white.</p>
 </div>
 
-<div id="container" class="clearfix">
+<div id="masonry-container" class="clearfix">
 
   <div class="box col2">
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
@@ -188,14 +188,14 @@ layout: default
     <p>Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis.</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <script src="../{{ site.jquery_js }}"></script>
 <script src="../{{ site.masonry_js }}"></script>
 <script>
   $(function(){
     
-      $('#container').masonry({
+      $('#masonry-container').masonry({
         itemSelector: '.foo'
       }).css({ background: 'black' });
       

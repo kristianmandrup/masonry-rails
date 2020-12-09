@@ -21,7 +21,7 @@ Options are set with an object as second argument to the `.masonry()` method. Al
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   itemSelector: '.box',
   columnWidth: 240,
   animationOptions: {
@@ -62,7 +62,7 @@ To set a dynamic column width, you can pass in a function that returns the value
 
 {% highlight javascript %}
 
-$('#container').masonry({
+$('#masonry-container').masonry({
   // set columnWidth a fraction of the container width
   columnWidth: function( containerWidth ) {
     return containerWidth / 5;
@@ -152,6 +152,6 @@ Filters item elements to selector. If not set, Masonry defaults to using the chi
 
 {% highlight javascript %}
 
-$('#container').masonry({ itemSelector: '.box' });
+$('#masonry-container').masonry({ itemSelector: '.box' });
 
 {% endhighlight %}

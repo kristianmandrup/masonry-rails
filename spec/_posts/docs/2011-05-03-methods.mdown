@@ -18,7 +18,7 @@ Masonry offers several methods to extend functionality. Masonry's methods follow
 
 {% highlight javascript %}
 
-$('#container').masonry( 'methodName', [optionalParameters] )
+$('#masonry-container').masonry( 'methodName', [optionalParameters] )
 
 {% endhighlight %}
 
@@ -38,7 +38,7 @@ Triggers `layout` on item elements that have been appended to the container.
 {% highlight javascript %}
 
 var $boxes = $('<div class="box"/><div class="box"/><div class="box"/>');
-$('#container').append( $boxes ).masonry( 'appended', $boxes );
+$('#masonry-container').append( $boxes ).masonry( 'appended', $boxes );
 
 {% endhighlight %}
 
@@ -46,7 +46,7 @@ Setting the `isAnimatedFromBottom` argument to <code><span class="kc">true</span
 
 {% highlight javascript %}
 
-$('#container').append( $boxes ).masonry( 'appended', $boxes, true );
+$('#masonry-container').append( $boxes ).masonry( 'appended', $boxes, true );
 
 {% endhighlight %}
 
@@ -58,7 +58,7 @@ The `appended` method is ideal to use Masonry with Infinite Scroll, in its callb
 {% highlight javascript %}
 
 
-var $container = $('#container');
+var $container = $('#masonry-container');
 $container.infinitescroll({
     // infinite scroll options...
   },
@@ -137,7 +137,7 @@ Convenience method for triggering `reloadItems` then `.masonry()`. Useful for pr
 {% highlight javascript %}
 
 var $boxes = $('<div class="box"/><div class="box"/><div class="box"/>');
-$('#container').prepend( $boxes ).masonry( 'reload' );
+$('#masonry-container').prepend( $boxes ).masonry( 'reload' );
 
 {% endhighlight %}
 

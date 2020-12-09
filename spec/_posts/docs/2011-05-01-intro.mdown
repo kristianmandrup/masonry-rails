@@ -24,7 +24,7 @@ Masonry works on a container element with a group of similar child items.
 
 {% highlight html %}
 
-<div id="container">
+<div id="masonry-container">
   <div class="item">...</div>
   <div class="item">...</div>
   <div class="item">...</div>
@@ -63,7 +63,7 @@ It is recommended you specify an `itemSelector` and `columnWidth`. There are a n
 {% highlight javascript %}
 
 $(function(){
-  $('#container').masonry({
+  $('#masonry-container').masonry({
     // options
     itemSelector : '.item',
     columnWidth : 240
@@ -83,7 +83,7 @@ If your content contains any images, you'll want to ensure that Masonry is trigg
 
 {% highlight javascript %}
 
-var $container = $('#container');
+var $container = $('#masonry-container');
 $container.imagesLoaded(function(){
   $container.masonry({
     itemSelector : '.item',

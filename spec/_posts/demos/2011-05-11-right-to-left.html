@@ -9,7 +9,7 @@ has_modernizr: true
   <p>Enable right-to-layout by setting the <a href="../docs/options.html#isrtl"><code>isRTL</code> option</a> to <code>true</code>.</p>
 </div>
 
-<div id="container" class="transitions-enabled rtl clearfix">
+<div id="masonry-container" class="transitions-enabled rtl clearfix">
 
   <div class="box col2">
     <p>Sit amet mi ullamcorper vehicula</p>
@@ -117,14 +117,14 @@ has_modernizr: true
     <p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula</p>
   </div>
 
-</div> <!-- #container -->
+</div> <!-- #masonry-container -->
 
 <script src="../{{ site.jquery_js }}"></script>
 <script src="../{{ site.masonry_js }}"></script>
 <script>
   $(function(){
     
-    $('#container').masonry({
+    $('#masonry-container').masonry({
       itemSelector: '.box',
       columnWidth: 100,
       isAnimated: !Modernizr.csstransitions,
